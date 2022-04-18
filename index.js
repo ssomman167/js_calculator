@@ -91,7 +91,7 @@ displayNumber(number){
     }
     else
     {
-        integerDisplay=integerPart 
+        integerDisplay=integerPart.toLocaleString('en',{maximumFractionDigits:0})
     }
     if(decimalPart==null)
     {
@@ -105,7 +105,7 @@ displayNumber(number){
 
 }
     updateDisplay(){
-this.curr.innerText=this.currNumber=this.displayNumber(this.currNumber)
+this.curr.innerText=this.displayNumber(this.currNumber)
 
 if(this.operation==undefined)
 this.prev.innerText=""
